@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.where("id != ?", @current_user.id)
+    @users = User.all
   end
 
   def new
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       # we should also sign them in
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "Welcome!"
+      redirect_to "/users", notice: "Welcome!"
     else
       render :new
     end
