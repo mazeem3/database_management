@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-xs-8">
+  <div class="well">
+    <% @books.each do |book| %>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">
+        <%= link_to book.title, book_path(id: book.id) %></h4><br>
+        <small>Title:</small>
+        <%= book.title %><br>
+        by <%= link_to book.author %>
+      </div>
+    </div>
+    <% end %><br>
+  </div>
+  </div>
+</div>

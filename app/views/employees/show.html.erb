@@ -1,0 +1,15 @@
+<div class="col-sm-8">
+    <div class="well well-lg">
+        Employee Name:
+        <%= @current_user.username %><br>
+        Hours Worked:
+        <%= @current_user.hrs_worked %>
+        <br>
+        <br><br>
+
+        <%= link_to 'All Books', root_path, class:"btn btn-primary" %>
+        <%= link_to 'Add New Book', new_book_path, class:"btn btn-primary" %>
+
+        <br>
+    </div>
+</div>

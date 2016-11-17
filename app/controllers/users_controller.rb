@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       # we should also sign them in
       session[:user_id] = @user.id
-      redirect_to "/users", notice: "Welcome!"
+      redirect_to root_path, notice: "Welcome!"
     else
       render :new
     end
