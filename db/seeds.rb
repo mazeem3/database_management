@@ -4,6 +4,7 @@ Employee.delete_all
 Book.delete_all
 Publisher.delete_all
 User.delete_all
+Checkout.delete_all
 
 maaz = User.create! username: "maaz", password: "12345678"
 
